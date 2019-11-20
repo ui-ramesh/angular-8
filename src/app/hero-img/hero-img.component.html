@@ -1,0 +1,19 @@
+<mat-form-field class="selectOptionPostion">
+  <mat-select [(ngModel)]="selected" (selectionChange)="getSelectedImg($event)">
+    <mat-option *ngFor="let imageCont of imageContainer" value="{{imageCont.imageName}}">{{imageCont.imageName}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<div class="content">
+  <div class="img-container">
+    <div class="hero-image"
+      [ngStyle]="{'background-position-y' :  selectedImage.position + '%' ,'background-image': 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) , url(../assets/image/' +selected +')'}">
+      <div class="hero-text">
+        <h1>{{selectedImage.heading}}</h1>
+        <p>{{selectedImage.subheading}}</p>
+      </div>
+    </div>
+  </div>
+  <div>
+  </div>
+</div>

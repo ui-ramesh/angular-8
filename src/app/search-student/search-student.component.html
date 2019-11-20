@@ -1,0 +1,6 @@
+<mat-card>
+    <app-child-search [childMessage]="parentMessage" (messageEvent)="receiveMessage($event)">
+    </app-child-search>
+     <div>{{message}}</div>
+    <div>{{siblingServiceMessage}}</div> 
+</mat-card>
