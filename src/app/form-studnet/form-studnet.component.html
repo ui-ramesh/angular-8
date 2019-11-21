@@ -1,26 +1,31 @@
 <mat-card style="width:100%">
     <form class="student-form" [formGroup]="studentRegisterForm">
         <div class="form-item">
-          <mat-form-field style ="width :45%">
+          <mat-form-field style ="width :30%">
               <input matInput placeholder="firstName" formControlName="firstName">
               <mat-error *ngIf= 
               "studentRegisterForm.get('firstName').hasError('pattern') || 
               studentRegisterForm.get('firstName').hasError('emptySpace')">
-                Please enter a valid firstName address
+                Please enter a valid First Name 
              </mat-error>
             </mat-form-field>
-            <mat-form-field style ="width :45%">
+            <mat-form-field style ="width :30%">
                 <input matInput placeholder="lastName" formControlName="lastName">
                 <mat-error *ngIf=
                 "studentRegisterForm.get('lastName').hasError('pattern') || 
                 studentRegisterForm.get('lastName').hasError('emptySpace')">
-                 Please enter a valid lastName address
+                 Please enter a valid Last Name 
                 </mat-error>
               </mat-form-field>
-      
-      </div>
-        
-       
-      </form>
+              <mat-form-field style ="width :30%">
+                  <input matInput placeholder="StudentID" formControlName="StudentID">
+                  <mat-error *ngIf=
+                  "studentRegisterForm.get('StudentID').hasError('pattern') || 
+                  studentRegisterForm.get('StudentID').hasError('emptySpace')">
+                   Please enter a valid Student ID 
+                  </mat-error>
+                </mat-form-field>
+               </div>
+         </form>
 </mat-card>
     
