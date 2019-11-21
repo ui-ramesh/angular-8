@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-// import { User } from '../model/studentForm';
+import { User } from '../model/studentForm';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-studnet',
@@ -8,28 +8,33 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
   styleUrls: ['./form-studnet.component.scss']
 })
 export class FormStudnetComponent implements OnInit {
-  // studentRegisterForm: FormGroup;
-  // user: User = {
-  //   firstName: '',
-  //   lastName: '',
-  //   StudentID : ''
-  // };
+  studentRegisterForm: FormGroup;
+  user: User = {
+    firstName: '',
+    lastName: '',
+    StudentID : ''
+  };
  
   constructor(
-    //private formBuilder: FormBuilder
+    private formBuilder: FormBuilder
     ) { 
   }
  ngOnInit() {
-   // this.formDetail();
+   this.formDetail();
   }
 
-//   formDetail(){
-//   this.studentRegisterForm = this.formBuilder.group({
-//     'firstName': [this.user.firstName, [Validators.required]],
-//     'lastName': [this.user.lastName, [Validators.required]],
-//     'StudentID': [this.user.StudentID, 
-//       [Validators.required,  Validators.minLength(6)]]
-//   });
-// }
+  formDetail(){
+  this.studentRegisterForm = this.formBuilder.group({
+    'firstName': [' ',
+     [Validators.required,
+       Validators.maxLength(20)]],
+    'lastName': ['', 
+    [Validators.required, 
+      Validators.maxLength(6)]],
+    'StudentID': ['', 
+      [Validators.required, 
+      Validators.minLength(6)]]
+  });
+}
 
 }

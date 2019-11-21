@@ -77,7 +77,6 @@ import {MatTreeModule} from '@angular/material/tree';
     MatCardModule,
     MatPaginatorModule,
     MatFormFieldModule ,
-    ReactiveFormsModule,
     MatInputModule,
     MatTabsModule,
     MatSelectModule,
@@ -122,6 +121,7 @@ import {MatTreeModule} from '@angular/material/tree';
     MatTreeModule,
     PortalModule,
     ScrollingModule,
+    ReactiveFormsModule 
     
   
 ],

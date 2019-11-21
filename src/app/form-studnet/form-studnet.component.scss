@@ -1,9 +1,20 @@
 .student-form {
  
-  width: 75%;
+  width: 100%;
+ 
 }
 
 .student-full-width {
   width: 100%;
 }
 
+.form-item{
+  flex-direction: row;
+  
+  display: flex;
+  place-content: stretch space-between;
+  width: 100%
+
+
+ 
+}

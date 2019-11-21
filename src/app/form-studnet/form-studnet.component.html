@@ -1,23 +1,26 @@
-<!-- <mat-card>
+<mat-card style="width:100%">
     <form class="student-form" [formGroup]="studentRegisterForm">
-        <mat-form-field flexlex="1 1 auto">
-          <input matInput placeholder="firstName" ormControlName="firstName"  maxlength="20">
-          <mat-error *ngIf=
-          "studentRegisterForm.get('firstName')hasError('pattern') || 
-          studentRegisterForm.get('firstName')hasError('emptySpace')">
-            Please enter a valid firstName address
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field flexlex="1 1 auto">
-            <input matInput placeholder="firstName" ormControlName="firstName"  maxlength="20">
-            <mat-error *ngIf=
-            "studentRegisterForm.get('firstName')hasError('pattern') || 
-            studentRegisterForm.get('firstName')hasError('emptySpace')">
-              Please enter a valid firstName address
-            </mat-error>
-          </mat-form-field>
-  
+        <div class="form-item">
+          <mat-form-field style ="width :45%">
+              <input matInput placeholder="firstName" formControlName="firstName">
+              <mat-error *ngIf= 
+              "studentRegisterForm.get('firstName').hasError('pattern') || 
+              studentRegisterForm.get('firstName').hasError('emptySpace')">
+                Please enter a valid firstName address
+             </mat-error>
+            </mat-form-field>
+            <mat-form-field style ="width :45%">
+                <input matInput placeholder="lastName" formControlName="lastName">
+                <mat-error *ngIf=
+                "studentRegisterForm.get('lastName').hasError('pattern') || 
+                studentRegisterForm.get('lastName').hasError('emptySpace')">
+                 Please enter a valid lastName address
+                </mat-error>
+              </mat-form-field>
+      
+      </div>
+        
        
       </form>
-</mat-card> -->
+</mat-card>
     
