@@ -14,12 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule, MatSelectModule } from '@angular/material';
-import { SearchStudentComponent } from './search-student/search-student.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { StudentDetailDialogComponent } from './student-detail-dialog/student-detail-dialog.component';
-import { ChildSearchComponent } from './search-student/child-search/child-search.component';
-import { FormStudnetComponent } from './form-studnet/form-studnet.component';
-import {A11yModule} from '@angular/cdk/a11y';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {PortalModule} from '@angular/cdk/portal';
 import {ScrollingModule} from '@angular/cdk/scrolling';
@@ -53,6 +49,9 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
+import { SiblingCommunicationComponent } from './sibling-communication/sibling-communication.component';
+import { Sib1Component } from './sibling-communication/sib1/sib1.component';
+import { Sib2Component } from './sibling-communication/sib2/sib2.component';
 
 ;
 
@@ -61,10 +60,10 @@ import {MatTreeModule} from '@angular/material/tree';
     AppComponent,
     HeroImgComponent,
     DashBoardComponent,
-    SearchStudentComponent,
     StudentDetailDialogComponent,
-    ChildSearchComponent,
-    FormStudnetComponent
+    SiblingCommunicationComponent,
+    Sib1Component,
+    Sib2Component
   ],
   imports: [
     BrowserModule,

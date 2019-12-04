@@ -45,8 +45,11 @@ export class DashBoardComponent implements OnInit, AfterViewInit, OnDestroy {
     this.loadingSubscription = this.studentSvc.studentInfo().subscribe(data => {
       this.dataSource.data = data;
       console.log(this.dataSource.data);
-    });
-  }
+    },
+    error =>{
+      console.log(error.message);
+    }
+    )}
   studentDetail(row) {
     console.log('row', row);
     this.dialog.open(StudentDetailDialogComponent, {
@@ -62,6 +65,7 @@ export class DashBoardComponent implements OnInit, AfterViewInit, OnDestroy {
 
 
   ngOnDestroy() {
+    console.log('the mat table  component is destroyed')
     this.loadingSubscription.unsubscribe();
   }
 

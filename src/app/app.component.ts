@@ -23,12 +23,9 @@ export class AppComponent implements OnInit {
       label:'Image',
       path:'image'
     },
+  
     {
-      label:'Search Form',
-      path:'search'
-    },
-    {
-      label:' Stdent Form',
+      label:' Student Form',
       path:'form'
     }
 

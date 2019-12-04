@@ -1,4 +1,16 @@
-  .selectOptionPostion{
+//trying to show how the extend work in sass
+.height-100 {
+  height: 100%;
+}
+//mixin concept
+@mixin position-rel($left, $top) {
+  position: relative;
+  left: $left;
+  top:$top;
+ 
+}
+
+.selectOptionPostion{
     position: relative;
     left:4%;
   }
@@ -8,17 +20,18 @@
     background-position-x: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    height: 100% !important;
+    // position: relative;
     font-family: Arial, sans-serif;
-    top: 41%;
-    left: 4%;
+    // top: 41%;
+    // left: 4%;
     width: 92%;
     box-shadow: 0px 38px white;
+    @extend .height-100;
+    @include position-rel(4%, 41%);
     
   }
  .content {
-    height: 100%;
+    @extend .height-100;
     background-color: black;
   }
   .hero-text {

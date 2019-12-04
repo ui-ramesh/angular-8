@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-header *ngIf="message.firstName">
+    Name of the the student:  {{message.firstName}}
+  </mat-card-header>
+      <mat-card-content>
+        <div style="float: right"> {{objDate | date :'short'}} </div>
+      </mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-content>
+    <app-sib1 (messageEvent)="receiveMessage($event)" [childMessage]="parentMessage"></app-sib1>
+    <hr>
+    <app-sib2></app-sib2>
+
+  </mat-card-content>
+</mat-card>

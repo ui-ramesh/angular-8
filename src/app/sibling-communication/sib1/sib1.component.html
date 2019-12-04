@@ -1,0 +1,34 @@
+<div style="width:100%">
+<div class="center">
+    {{messageToChild}}
+  </div>
+  <form class="student-form" [formGroup]="studentRegisterForm" (submit)="submit();">
+    <div class="form-item">
+      <mat-form-field class="form-indiv-item">
+        <input matInput placeholder="First Name" formControlName="firstName" required>
+        <mat-error *ngIf="studentRegisterForm.get('firstName').hasError('pattern') || 
+                studentRegisterForm.get('firstName').hasError('emptySpace')">
+          Please enter a valid First Name
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-indiv-item">
+        <input matInput placeholder="Last Name" formControlName="lastName" required>
+        <mat-error *ngIf="studentRegisterForm.get('lastName').hasError('pattern') || 
+                  studentRegisterForm.get('lastName').hasError('emptySpace')">
+          Please enter a valid Last Name
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-indiv-item">
+        <input matInput placeholder="Student ID" formControlName="StudentID" required>
+        <mat-error *ngIf="studentRegisterForm.get('StudentID').hasError('pattern') || 
+                    studentRegisterForm.get('StudentID').hasError('emptySpace')">
+          Please enter a valid Student ID
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <button type="submit" mat-raised-button color="primary"
+     [disabled]="studentRegisterForm.invalid ||
+                  studentRegisterForm.pristine ">
+      Submit</button>
+  </form>
+</div>

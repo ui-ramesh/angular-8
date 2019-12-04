@@ -11,7 +11,7 @@ columns  = [
     },
     {
         columnDef: 'studnetId',
-        header: 'studnetId',
+        header: 'Student Id',
         cell: (row: Student) => (row.studnetId? row.studnetId :'')
     },
     {
@@ -26,7 +26,7 @@ columns  = [
     },
     {
         columnDef: 'gradutationYear',
-        header: 'IGradaute Date',
+        header: 'Gradaute Date',
         cell: (row: Student) => (row.gradutationYear? row.gradutationYear :'')
     } 
     
