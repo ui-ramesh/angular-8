@@ -21,7 +21,7 @@ export class DashBoardComponent implements OnInit, AfterViewInit, OnDestroy {
   displayedColumns = [...this.columns.map(x => x.columnDef)];
 
   @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
-  @ViewChild(MatSort, { static: true }) sort: MatSort
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
   active: string;
   loadingSubscription: Subscription
   constructor(
@@ -61,6 +61,8 @@ export class DashBoardComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+
   }
 
 
