@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { SiblingService } from 'src/app/service/sibling.service';
-import { FormBuilder, Validators, FormControl } from '@angular/forms';
+import { FormBuilder, Validators, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-sib1',
@@ -10,56 +10,48 @@ import { FormBuilder, Validators, FormControl } from '@angular/forms';
 export class Sib1Component implements OnInit {
 
   msg: [] = [];
-  @Input() childMessage: any;
+  @Input() childMessage: any; 
   @Output() messageEvent = new EventEmitter<any>();
   messageToChild: string;
-  studentRegisterForm: any;
+  studentRegisterForm: FormGroup;
   constructor(private svc: SiblingService,
     private formBuilder: FormBuilder) { }
+    statusVal:string ='why is commumication';
   sendMessage() {
     this.messageEvent.emit(this.msg)
   }
+  public data = new Date(); 
 
   ngOnInit() {
     this.messageToChild = this.childMessage;
     this.formDetail();
     this.studentRegisterForm.reset();
+    this. sentStatus();
   }
   addMessage() {
     this.svc.increaseCounter(this.msg);
     this.sendMessage();
   }
+  sentStatus(){
+    this.svc.status1.emit(this.statusVal);
+  }
   formDetail() {
     this.studentRegisterForm = this.formBuilder.group({
       firstName: ['',
-        [
-          Validators.maxLength(20),
-          this.emptySpaceValidator]],
+        [Validators.required,
+          Validators.minLength(5)]],
       lastName: ['',
-        [
-          Validators.maxLength(60),
-          this.emptySpaceValidator]],
+        [Validators.required,
+          Validators.minLength(5)]],
       StudentID: ['',
-        [
+        [Validators.required,
           Validators.minLength(6),
-          Validators.pattern('(?!0)^[0-9]*'),
-          this.emptySpaceValidator]],
+          Validators.pattern('(?!0)^[0-9]*')]],
 
     })
 
   }
 
-  public emptySpaceValidator(control: FormControl) {
-    if ((!control.value || control.value.maxLength === 0)) {
-      return null;
-    }
-    const spaceOccp = control.value.trim().length === 0;
-    {
-      return !spaceOccp ? null : { emptySpace: true };
-    }
-
-
-  }
 
   submit() {
     this.msg = this.studentRegisterForm.value;

@@ -52,8 +52,9 @@ import {MatTreeModule} from '@angular/material/tree';
 import { SiblingCommunicationComponent } from './sibling-communication/sibling-communication.component';
 import { Sib1Component } from './sibling-communication/sib1/sib1.component';
 import { Sib2Component } from './sibling-communication/sib2/sib2.component';
-
-;
+import { ColorExampleDirective } from './shared/directive/color-example.directive';
+import { DropdownDirective } from './shared/dropdown.directive';
+import { UpperC } from './shared/app.sqrt';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,10 @@ import { Sib2Component } from './sibling-communication/sib2/sib2.component';
     StudentDetailDialogComponent,
     SiblingCommunicationComponent,
     Sib1Component,
-    Sib2Component
+    Sib2Component,
+    ColorExampleDirective,
+    DropdownDirective,
+    UpperC, 
   ],
   imports: [
     BrowserModule,

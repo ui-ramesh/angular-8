@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Student } from '../model/student';
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +19,8 @@ export class StudentService {
  
     studentInfo() : Observable<Student[]>  {
 
-       return this.http.get<Student[]>("http://localhost:4200/assets/json/student.json");
-
+       return this.http.get<Student[]>("http://localhost:4200/assets/json/student.json")
+               
            
   }
 }

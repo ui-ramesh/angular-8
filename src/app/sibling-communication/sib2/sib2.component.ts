@@ -10,7 +10,15 @@ export class Sib2Component implements OnInit {
 
   private finalMsg:any= [];
 
-  constructor(private svc: SiblingService) { }
+  constructor(private svc: SiblingService) { 
+ 
+    this.svc.status1.subscribe(
+          (status:string) => {
+      
+        console.log('this.status', status);
+      }
+    )
+  }
  
 
   ngOnInit() {
@@ -22,6 +30,7 @@ export class Sib2Component implements OnInit {
       }
     );
   }
+
   
 }
 

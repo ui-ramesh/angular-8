@@ -17,8 +17,9 @@ export class DashBoardComponent implements OnInit, AfterViewInit, OnDestroy {
   dataSource = new MatTableDataSource;
   tableCol: tableColumn = new tableColumn();
   columns = this.tableCol.columns;
-
+  // arrat destructuring
   displayedColumns = [...this.columns.map(x => x.columnDef)];
+  
 
   @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
@@ -28,9 +29,12 @@ export class DashBoardComponent implements OnInit, AfterViewInit, OnDestroy {
     private studentSvc: StudentService,
     private dialog: MatDialog,
   ) { }
-
+ private errormsg: string;
+ private error1 :boolean= false;
   ngOnInit() {
     this.loadStudentInfo();
+    console.log('displayedColumns', [...this.columns.map(x => x.columnDef)]);
+    this.error1= false;
   }
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -45,9 +49,13 @@ export class DashBoardComponent implements OnInit, AfterViewInit, OnDestroy {
     this.loadingSubscription = this.studentSvc.studentInfo().subscribe(data => {
       this.dataSource.data = data;
       console.log(this.dataSource.data);
+      this.error1= false;
+  
     },
     error =>{
-      console.log(error.message);
+      this.error1= true;
+      console.log(error);
+     this.errormsg = error;
     }
     )}
   studentDetail(row) {

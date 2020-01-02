@@ -1,3 +1,10 @@
+<div *ngIf = "error; else noError">
+  {{errormsg}}
+</div>
+
+<ng-template #noError>
+
+
 <mat-card>
   <mat-card-title>Student Info</mat-card-title>
   <mat-card-subtitle>
@@ -33,3 +40,4 @@
 
   </mat-card-content>
 </mat-card>
+</ng-template>

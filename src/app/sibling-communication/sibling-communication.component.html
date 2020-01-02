@@ -8,9 +8,11 @@
 </mat-card>
 <mat-card>
   <mat-card-content>
-    <app-sib1 (messageEvent)="receiveMessage($event)" [childMessage]="parentMessage"></app-sib1>
+    <app-sib1  appColorExample (messageEvent)="receiveMessage($event)" [childMessage]="parentMessage"></app-sib1>
     <hr>
     <app-sib2></app-sib2>
+    
 
   </mat-card-content>
+
 </mat-card>
