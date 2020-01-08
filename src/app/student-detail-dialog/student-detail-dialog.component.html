@@ -1,8 +1,21 @@
-<div (click) ="close()" class= "floatRight">x</div>
-<h1 mat-dialog-title>Student Graduation Year</h1>
-<div mat-dialog-content>
-      <p>
-      <span style="font-weight: bold;">{{DialogData.studnetName}}</span>
-       <span> is a great sudent who  is graduating in <span style="font-weight: bold;">{{DialogData.gradutationYear}}.</span> </span>
-      </p> 
-</div>
+<mat-card>
+      <div (click)="close()" class="floatRight">x</div>
+      <h1 mat-dialog-title>Student Graduation Year</h1>
+      <div mat-dialog-content>
+            Student Name : <b>{{DialogData.studnetName}}</b>
+            <mat-accordion *ngFor="let studentDetail of studentDetails">
+                  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false"
+                        class="stdDetailExp">
+                        <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                    {{studentDetail.Term }}
+                              </mat-panel-title>
+                              <mat-panel-description>
+                                    {{studentDetail.Term }} - {{studentDetail.Subject}}
+                              </mat-panel-description>
+                        </mat-expansion-panel-header>
+                        <p>{{studentDetail.professsorName}}</p>
+                  </mat-expansion-panel>
+            </mat-accordion>
+      </div>
+</mat-card>

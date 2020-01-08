@@ -1,12 +1,82 @@
-
-        [{"studnetId" : 8, "studnetName" : "Mike Junior",  "status" : 1.0079, "symbol": "H", "creditThisTerm": 777, "gradutationYear": 2021 },
-        {"studnetId" : 2, "studnetName" : "Sam Senior",   "status":  4.0026, "symbol": "He", "creditThisTerm": 777, "gradutationYear": 2021},
-        {"studnetId" : 3, "studnetName" : "Vicotr Sharma",  "status": 6.941, "symbol": "Li", "creditThisTerm": 777, "gradutationYear": 2021},
-        {"studnetId" : 4, "studnetName" : "Jenny JJ",  "status": 9.0122, "symbol": "Be" , "creditThisTerm": 777, "gradutationYear": 2021},
-        {"studnetId" : 5, "studnetName" : "Jesika Bush",  "status": 10.811, "symbol": "B" , "creditThisTerm": 777, "gradutationYear": 2021},
-        {"studnetId" : 6, "studnetName" : "Vicotria Obama ",  "status": 12.0107, "symbol": "C" , "creditThisTerm": 777, "gradutationYear": 2021},
-        {"studnetId" : 7, "studnetName" : "Ram Texas ",  "status": 14.0067, "symbol": "N" , "creditThisTerm": 777, "gradutationYear": 2021},
-        {"studnetId" : 1, "studnetName" : "Raju Senior ",  "status": 15.9994, "symbol": "O" , "creditThisTerm": 777, "gradutationYear": 2021},
-        {"studnetId" : 9, "studnetName" : "Rajesh Senior ",  "status": 18.9984, "symbol": "F" , "creditThisTerm": 777, "gradutationYear": 2021},
-        {"studnetId" : 10, "studnetName" : "Rani Junior ",  "status": 20.1797, "symbol": "Ne" , "creditThisTerm": 777, "gradutationYear": 2021}
-         ]
+[
+        {
+                "studnetId": 8,
+                "studnetName": "Mike Junior",
+                "status": 1.0079,
+                "symbol": "H",
+                "creditThisTerm": 777,
+                "gradutationYear": 2021
+        },
+        {
+                "studnetId": 2,
+                "studnetName": "Raju Senior",
+                "status": 4.0026,
+                "symbol": "He",
+                "creditThisTerm": 777,
+                "gradutationYear": 2021
+        },
+        {
+                "studnetId": 3,
+                "studnetName": "Vicotr Sharma",
+                "status": 6.941,
+                "symbol": "Li",
+                "creditThisTerm": 777,
+                "gradutationYear": 2021
+        },
+        {
+                "studnetId": 4,
+                "studnetName": "Jenny JJ",
+                "status": 9.0122,
+                "symbol": "Be",
+                "creditThisTerm": 777,
+                "gradutationYear": 2021
+        },
+        {
+                "studnetId": 5,
+                "studnetName": "Jesika Bush",
+                "status": 10.811,
+                "symbol": "B",
+                "creditThisTerm": 777,
+                "gradutationYear": 2021
+        },
+        {
+                "studnetId": 6,
+                "studnetName": "Vicotria Obama ",
+                "status": 12.0107,
+                "symbol": "C",
+                "creditThisTerm": 777,
+                "gradutationYear": 2021
+        },
+        {
+                "studnetId": 7,
+                "studnetName": "Ram Texas ",
+                "status": 14.0067,
+                "symbol": "N",
+                "creditThisTerm": 777,
+                "gradutationYear": 2021
+        },
+        {
+                "studnetId": 1,
+                "studnetName": "Raju Senior ",
+                "status": 15.9994,
+                "symbol": "O",
+                "creditThisTerm": 777,
+                "gradutationYear": 2021
+        },
+        {
+                "studnetId": 9,
+                "studnetName": "Rajesh Senior ",
+                "status": 18.9984,
+                "symbol": "F",
+                "creditThisTerm": 777,
+                "gradutationYear": 2021
+        },
+        {
+                "studnetId": 10,
+                "studnetName": "Rani Junior ",
+                "status": 20.1797,
+                "symbol": "Ne",
+                "creditThisTerm": 777,
+                "gradutationYear": 2021
+        }
+]

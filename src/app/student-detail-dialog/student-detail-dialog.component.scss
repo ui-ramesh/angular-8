@@ -2,3 +2,7 @@
     float: right;
     cursor: pointer;
 }
+::ng-deep mat-accordion .stdDetailExp{
+    height: 100px;
+    margin-bottom: 20px;
+}

@@ -54,9 +54,10 @@ export class Sib1Component implements OnInit {
 
 
   submit() {
+    this.studentRegisterForm.reset()
     this.msg = this.studentRegisterForm.value;
     this.addMessage()
-    this.studentRegisterForm.reset()
+    
 
   }
 

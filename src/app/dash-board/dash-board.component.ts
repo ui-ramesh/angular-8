@@ -61,8 +61,10 @@ export class DashBoardComponent implements OnInit, AfterViewInit, OnDestroy {
   studentDetail(row) {
     console.log('row', row);
     this.dialog.open(StudentDetailDialogComponent, {
-      width: '30vw',
-      height: '40vh',
+      width: '100vw',
+     height: '100vw',
+     maxWidth: '100vw',
+     maxHeight: '100vh',
       data: row
     })
   }
