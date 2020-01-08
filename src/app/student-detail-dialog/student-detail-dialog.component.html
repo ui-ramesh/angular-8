@@ -1,8 +1,7 @@
 <mat-card>
       <div (click)="close()" class="floatRight">x</div>
-      <h1 mat-dialog-title>Student Graduation Year</h1>
+      <h1 mat-dialog-title>Student: {{DialogData.studnetName}}</h1>
       <div mat-dialog-content>
-            Student Name : <b>{{DialogData.studnetName}}</b>
             <mat-accordion *ngFor="let studentDetail of studentDetails">
                   <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false"
                         class="stdDetailExp">
